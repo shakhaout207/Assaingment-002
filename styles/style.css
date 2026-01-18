@@ -1,4 +1,9 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); 
+ 
+ 
+ 
+ 
+ *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -28,7 +33,7 @@
     
 } */
  .logo{
-  font-size: 34px;          /* size adjust করতে পারো */
+  font-size: 34px;          
   font-weight: 800;
   letter-spacing: -0.5px;
   margin: 0;
@@ -36,18 +41,18 @@
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* "Tech" part */
+
 .logo-tech{
   color: #ffffff;
 }
 
-/* "Wave" part (gradient text) */
+
 .logo-wave{
   background: linear-gradient(90deg, #ff4fd8, #a855f7);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;                /* important */
-  -webkit-text-fill-color: transparent; /* Safari/Chrome */
+  color: transparent;                
+  -webkit-text-fill-color: transparent; 
 }
 .h1-three-poperties{
     display: flex;
@@ -71,4 +76,229 @@
   font-weight: 600;
   background: linear-gradient(90deg, #facc15, #ec4899, #9333ea);
   cursor: pointer;
+}
+.hero-section{
+    position: relative;
+}
+.hero-section{
+ position: relative;
+  z-index: 2;
+  max-width: 920px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+/* ===== HERO BANNER ===== */
+.hero-banner{
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  overflow: hidden;
+  padding: 85px 16px 95px;
+
+  /* same vibe dark purple */
+  background:
+    radial-gradient(circle at 50% 0%, rgba(92, 44, 170, 0.55) 0%, rgba(18, 8, 31, 0.95) 55%, #0f071a 100%),
+    linear-gradient(180deg, #190b2a 0%, #12081f 60%, #0f071a 100%);
+}
+
+/* subtle vignette (edges dark) */
+.hero-banner::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at center, rgba(0,0,0,0) 40%, rgba(0,0,0,0.45) 100%);
+  pointer-events:none;
+  z-index:1;
+}
+
+/* WAVE: center line aligned with circle center */
+.wave{
+  position: absolute;
+  left: 50%;
+  top: 165px;                 /* IMPORTANT: wave line height position */
+  transform: translateX(-50%);
+  width: 120%;
+  max-width: 1400px;
+  opacity: 0.95;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 0 18px rgba(236, 72, 153, 0.08));
+}
+
+/* content center */
+.hero-content{
+    padding-top: 160px;
+    gap: 101 px;
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* circle wrapper */
+.logo-wrap{
+  position: relative;
+  margin-bottom: 18px;
+}
+
+/* circle container */
+.logo-circle{
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+
+  /* ring + glow */
+  box-shadow:
+    0 0 0 6px rgba(15, 7, 26, 0.75),     /* dark rim like screenshot */
+    0 0 0 8px rgba(155, 81, 255, 0.25),  /* outer soft ring */
+    0 18px 60px rgba(236, 72, 153, 0.20);
+}
+
+/* gradient circle image */
+.logo-circle .circle{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* mic center */
+.logo-circle .mic{
+  position: absolute;
+  width: 92px;
+  height: auto;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.35));
+}
+
+/* NEW badge (top-right) */
+.tag-new{
+  position: absolute;
+  top: 22px;
+  right: -22px;
+
+  background: #22c55e;
+  color: #062012;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+  box-shadow: 0 0 18px rgba(34, 197, 94, 0.55);
+}
+
+/* title */
+.hero-title{
+  margin: 0;
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  color: #ffffff;
+}
+
+/* subtitle */
+.hero-text{
+  margin: 10px 0 18px;
+  max-width: 520px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.58);
+}
+
+/* buttons */
+.hero-btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 16px;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: transform .15s ease, opacity .15s ease;
+}
+
+.btn img{
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+/* spotify gradient pill */
+.btn-spotify{
+  color: #fff;
+  background: linear-gradient(90deg, #facc15 0%, #ec4899 55%, #9333ea 100%);
+  box-shadow: 0 10px 28px rgba(236,72,153,0.25);
+}
+
+/* subscribe outline */
+.btn-sub{
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.45);
+  background: rgba(10, 5, 20, 0.18);
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  opacity: 0.96;
+}
+
+/* ===== Mobile max 576px ===== */
+@media (max-width: 576px){
+  .hero-banner{
+    padding: 70px 14px 80px;
+    min-height: 620px;
+  }
+
+  .wave{
+    top: 150px;        /* mobile e wave line ektu up */
+    width: 160%;
+  }
+
+  .logo-circle{
+    width: 185px;
+    height: 185px;
+  }
+
+  .logo-circle .mic{
+    width: 72px;
+  }
+
+  .hero-title{
+    font-size: 36px;
+  }
+
+  .hero-text{
+    max-width: 330px;
+    font-size: 12px;
+  }
+
+  .hero-btns{
+    gap: 10px;
+    flex-wrap: wrap;
+  }
 }
