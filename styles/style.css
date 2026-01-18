@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* nav ber desigen */
+.navigation-ber{
+    padding-left: 70px;
+    display: flex;
+    flex-direction: row;
+    background-color: #412567;
+   height: 70px;
+   align-items: center;
+   justify-content:space-between;
+}
+/* .navber-h1{
+    display: flex;
+} */
+/* .tech-container{
+    font-weight: 219px;
+    font-weight: 32px;
+    color: #fff;
+}
+.wave-container{
+   font-weight: 219px;
+    font-weight: 32px; 
+    color: linear-gradient(90deg, #facc15, #ec4899, #9333ea);
+    
+} */
+ .logo{
+  font-size: 34px;          /* size adjust করতে পারো */
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin: 0;
+  line-height: 1;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* "Tech" part */
+.logo-tech{
+  color: #ffffff;
+}
+
+/* "Wave" part (gradient text) */
+.logo-wave{
+  background: linear-gradient(90deg, #ff4fd8, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;                /* important */
+  -webkit-text-fill-color: transparent; /* Safari/Chrome */
+}
+.h1-three-poperties{
+    display: flex;
+    gap: 400px;
+   color: linear-gradient
+}
+.three-poperties{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    color: #fff;
+}
+.btn-container{
+ display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 20px;
+  border-radius: 990px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(90deg, #facc15, #ec4899, #9333ea);
+  cursor: pointer;
+}
